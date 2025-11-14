@@ -1,6 +1,8 @@
 def sum(n1,n2):
     print (n1 + n2)
+    
 
-sum(4,9)
+sum(4,5)
+
 
 
