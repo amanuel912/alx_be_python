@@ -10,7 +10,7 @@ def convert_to_fahrenheit(celsius):
 def main():
     temprature = input("Enter the temperature to convert: ")
     if not temprature.replace('.', '', 1).isdigit():
-        print("Please enter a valid number for temperature.")
+        print("Invalid temperature. Please enter a numeric value.")
         return
 
     temp_unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ")
