@@ -1,16 +1,18 @@
-FARENHEIT_TO_CELSIUS_FACTOR = 5.0 / 9.0
-CELSIUS_TO_FARENHEIT_FACTOR = 9.0 / 5.0
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
 def convert_to_celsius(fahrenheit):
-    return (fahrenheit - 32) * FARENHEIT_TO_CELSIUS_FACTOR
+    return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
-    return (celsius * CELSIUS_TO_FARENHEIT_FACTOR) + 32
+    return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
 def main():
     temprature = input("Enter the temperature to convert: ")
-    if temprature is not float and not temprature.isdigit():
+    if not temprature.replace('.', '', 1).isdigit():
         print("Please enter a valid number for temperature.")
+        return
+
     temp_unit = input("is this temperature in Celsius or Fahrenheit? (C/F): ")
     if temp_unit == 'C':
         converted_temp = convert_to_fahrenheit(float(temprature))
@@ -18,3 +20,5 @@ def main():
     else:
         converted_temp = convert_to_celsius(float(temprature))
         print(f"{temprature}°F is {converted_temp}°C")
+
+main()
