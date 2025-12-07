@@ -1,4 +1,4 @@
-from oop import book_class
+from book_class import Book
 def main():
     # Creating an instance of Book
     my_book = Book("1984", "George Orwell", 1949)
